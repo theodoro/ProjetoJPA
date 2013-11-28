@@ -7,6 +7,7 @@
 package br.com.entidade;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -25,7 +26,9 @@ public class Automovel implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(name = "modelo", length = 50, nullable = false)
     private String modelo;
+    @Column (name = "marca", length = 50, nullable = false)
     private String marca;
     private Integer anoFabricacao;
 
